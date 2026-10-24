@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9man members</title>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>9man members</h1>
+      </header>
+
+      <!-- Controls & Aggregate Stats Container Bar -->
+      <div class="controls-bar">
+        <div class="filter-group">
+          <label for="classFilter">Filter by Class:</label>
+          <select id="classFilter" onchange="handleFilterChange()">
+            <option value="ALL">All Classes</option>
+          </select>
+        </div>
+
+        <div class="stats-group">
+          <div class="stat-item">
+            <span class="stat-label">Total Players:</span>
+            <span id="playerCount" class="stat-value">0</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Total Characters:</span>
+            <span id="charCount" class="stat-value">0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Central Table Grid Framework -->
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Character Name</th>
+              <th>Specialization Details</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- Core structural components generate dynamically -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="teamData.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
